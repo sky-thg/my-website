@@ -1,0 +1,45 @@
+
+.menu {body{
+    background:#ffffff;   /* nền trắng */
+    font-family: Arial;
+    color:#222;           /* chữ đậm lại cho dễ đọc */
+}
+
+    padding: 15px 0;
+    text-align: center;
+}
+
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #444444;
+    margin: 0 18px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+/* icon */
+.breadcrumb a i {
+    margin-right: 6px;
+    color: #777;
+    transition: 0.25s;
+}
+
+/* hover */
+.breadcrumb a:hover {
+    color: #ff7a00;
+}
+
+.breadcrumb a:hover i {
+    color: #ff7a00;
+}
+
+/* khi click (active) */
+.breadcrumb a.active {
+    color: #ff7a00;
+}
+
+.breadcrumb a.active i {
+    color: #ff7a00;
+}

@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TravelBlog Tây Ninh City</title>
+
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f3f4f6;color:#333}
+header{background:white;border-bottom:1px solid #e5e7eb}
+.topbar{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:15px}
+.navbar{
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Logo nhấp nháy */
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    background: linear-gradient(90deg,#ff6a00,#ffcc00,#00c3ff,#ff6a00);
+    background-size:300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation: colorRun 5s linear infinite;
+}
+@keyframes colorRun{
+    from{background-position:0%}
+    to{background-position:300%}
+}
+.menu a{margin:0 12px;text-decoration:none;color:#333;font-weight:600}
+.menu a:hover{color:#ff6a00}
+.hero{
+    height:420px; 
+    background:url('https://dulich.tayninh.gov.vn/uploads/images/anh-1-1630-17038537624621198431135.jpg') center/cover no-repeat;
+    transition: height 0.35s ease;}
+.hero.small{
+    height:200px;}
+.container{max-width:1200px;margin:30px auto;display:grid;grid-template-columns:2fr 1fr;gap:25px}
+.card{background:white;border-radius:12px;padding:25px;box-shadow:0 4px 14px rgba(0,0,0,0.08)}
+.breadcrumb{color:#888;font-size:14px;margin-bottom:10px}
+h1{font-size:32px;margin:10px 0}
+.meta{color:#777;font-size:14px;margin-bottom:20px}
+.article img{width:100%;border-radius:10px;margin:20px 0}
+.sidebar h3{margin-top:0}
+.post{display:flex;gap:10px;margin-bottom:15px}
+.post img{width:90px;height:70px;object-fit:cover;border-radius:8px}
+.post-title{font-size:14px;font-weight:600}
+footer{text-align:center;padding:20px;background:#1f2937;color:white;margin-top:40px}
+@media(max-width:900px){.container{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="topbar">
+<div class="logo">TravelBlog</div>
+<link rel="stylesheet" href="trên.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div class="menu">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a> 
+    <a href="index.html"><i class="fa-solid fa-compass"></i> Khám phá</a> 
+    <a href="index.html"><i class="fa-solid fa-plane"></i> Du lịch</a>
+    <a href="index.html"><i class="fa-solid fa-mountain"></i> Trải nghiệm</a>
+    <a  href="login_page.html" class="login-btn" id="openLoginBtn"> <i class="fa-solid fa-user"></i> Đăng nhập</a>
+    </a>
+</div>       
+<script>
+    const loginBtn = document.getElementById('openLoginBtn');
+
+    loginBtn.onclick = function() {
+        // 1. Mở trang đăng nhập ở tab mới (hoặc cửa sổ popup nhỏ)
+        const loginWidth = 500;
+        const loginHeight = 600;
+        const left = (screen.width / 2) - (loginWidth / 2);
+        const top = (screen.height / 2) - (loginHeight / 2);
+        
+        window.open('login_page.html', 'LoginWindow', 
+            `width=${loginWidth},height=${loginHeight},top=${top},left=${left}`);
+
+        // 2. Lắng nghe phản hồi từ tab đăng nhập gửi về
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'LOGIN_SUCCESS') {
+                // Thay đổi giao diện khi đăng nhập xong
+                loginBtn.innerHTML = `<i class="fa-solid fa-circle-user"></i> Chào, ${event.data.user}`;
+                loginBtn.style.color = "#2ecc71"; // Đổi màu cho đẹp
+                alert("Hệ thống: Đã xác thực thành công!");
+            }
+        }, { once: true });
+    };
+</script>
+</div>
+</div>
+
+</div>
+
+
+
+</nav>
+</div>
+</header>
+
+<div class="hero"></div>
+<div class="container">
+
+<main class="card article">
+<div class="breadcrumb">Trang chủ > Bài viết > Du lịch</div>
+<h1>Chạm đỉnh mây ngàn, say lòng vị muối</h1>
+<div class="meta">
+    13/02/2026 • 998 lượt xem
+    <span class="rating">
+        ★★★★★
+    </span>
+    <span class="score">4.5/5</span>
+
+</div>
+
+<div class="banner"></div>
+<img src="https://media.vov.vn/sites/default/files/styles/large/public/2025-06/tay_ninh.jpg" alt="Ảnh Tây Ninh">
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    margin:0;
+}
+
+/* khung bài viết */
+.article-content{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* đoạn văn */
+.article-content p{
+    text-align:justify;
+    line-height:1.8;
+    font-size:17px;
+    color:#333;
+    margin-bottom:22px;
+}
+
+/* bỏ khoảng trắng cuối */
+.article-content p:last-child{
+    margin-bottom:0;
+}
+</style>
+
+</head>
+<body>
+
+<div class="article-content">
+
+<p>
+Nằm ở vị trí cầu nối chiến lược giữa cao nguyên Nam Trung Bộ và đồng bằng sông Cửu Long, Tây Ninh hiện lên như một bức tranh sơn thủy hữu tình, nơi những giá trị địa lý và tự nhiên hòa quyện chặt chẽ với dòng chảy lịch sử. Sự hùng vĩ của "nóc nhà Nam Bộ" – núi Bà Đen – không chỉ là một biểu tượng về địa chất mà còn là điểm tựa tâm linh, cùng với hệ sinh thái xanh mướt của hồ Dầu Tiếng và rừng nguyên sinh Lò Gò – Xa Mát tạo nên một không gian sinh thái đặc trưng, vừa hoang sơ vừa thơ mộng.
+</p>
+
+<p>
+Bề dày lịch sử của vùng đất biên cương này còn được minh chứng qua những di tích căn cứ kháng chiến oai hùng, nơi từng chứng kiến những biến động quan trọng của dân tộc. Chính sự giao thoa lâu đời đó đã bồi đắp nên một nền văn hóa Tây Ninh độc bản, mà đỉnh cao là kiến trúc rực rỡ của Tòa Thánh Cao Đài và các lễ hội dân gian đậm đà bản sắc. Trong không gian văn hóa ấy, hình ảnh con người Tây Ninh hiện ra với sự chân chất, nồng hậu, gửi gắm trọn vẹn tâm tình vào những thức quà đặc sản như bánh tráng phơi sương hay muối tôm đậm đà. Tất cả những yếu tố đó đã biến nơi đây thành một điểm đến không thể bỏ qua cho những ai khao khát tìm về sự kết nối giữa thiên nhiên, lịch sử và lòng người.
+</p>
+
+</div>
+
+
+<h2>Núi Bà Đen</h2>
+<img src="https://media.vietravel.com/images/Content/dong-nam-bo-du-lich-tay-ninh-nui-ba-den-1.png" alt="Núi Bà Đen">
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    margin:0;
+}
+
+/* khung bài viết */
+.article-content{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* đoạn văn */
+.article-content p{
+    text-align:justify;
+    line-height:1.8;
+    font-size:17px;
+    color:#333;
+    margin-bottom:22px;
+}
+
+/* bỏ khoảng trắng cuối */
+.article-content p:last-child{
+    margin-bottom:0;
+}
+</style>
+
+</head>
+<body>
+
+<div class="article-content">
+
+<p>
+Núi Bà Đen là ngọn núi cao nhất miền Đông Nam Bộ với độ cao 986m. Nhìn từ xa, ngọn núi hiện lên sừng sững giữa vùng đồng bằng bằng phẳng, tạo nên một cảnh quan kỳ vĩ, thường xuyên được bao phủ bởi những dải mây trắng bảng lảng. Đây là một phần của quần thể di tích lịch sử - văn hóa và danh thắng núi Bà, nơi hội tụ nguồn sinh khí dồi dào của đất trời.
+</p>
+
+<p>
+Tên gọi "Bà Đen" gắn liền với truyền thuyết về nàng Lý Thị Thiên Hương – một người phụ nữ tiết hạnh, kiên trinh. Qua nhiều thế kỷ, niềm tin vào sự linh ứng của Linh Sơn Thánh Mẫu (Bà Đen) đã biến nơi đây thành trung tâm hành hương lớn nhất phương Nam. Trong lịch sử kháng chiến, với địa thế hiểm trở và nhiều hang động tự nhiên, núi còn là căn cứ cách mạng vững chắc, ghi dấu những trang sử hào hùng của quân và dân Tây Ninh.
+</p>
+<img src="https://sun-ecommerce-cdn.azureedge.net/ecommerce/service-sites/thumbnail/SunGroup/Destination/T%C3%A2y%20Ninh/20610/image-thumb__20610__1600/%28Ngo%CC%82%20Thi%CC%A3%20Thu%20Ba%29%20DJI_20241215185906_0063_D.jpg" alt="Núi Bà Đen">
+<p>
+ Ngày nay, Núi Bà Đen đã khoác lên mình diện mạo mới, là sự giao thoa tuyệt vời giữa nét cổ kính của các ngôi chùa (chùa Bà, chùa Hang, chùa Trung) và sự hoành tráng của các công trình hiện đại trên đỉnh núi.
+</p>
+<p>
+    Mỗi dịp Xuân về, đặc biệt là Hội Xuân núi Bà (từ mùng 4 tháng Giêng) và lễ vía Bà (mùng 4, 5, 6 tháng 5 âm lịch), hàng triệu lượt khách lại đổ về đây. Họ không chỉ đến để cầu an mà còn để đắm mình vào không khí lễ hội rực rỡ, thưởng ngoạn muôn hoa khoe sắc trên đỉnh núi vốn có khí hậu mát mẻ quanh năm như một "Đà Lạt thu nhỏ".
+</p>
+<img src="https://cdn3.ivivu.com/2026/02/Hoi-xuan-nui-Ba-Den-ivivu-9.jpg" alt="Hội Xuân Núi Bà Đen">
+</div>
+
+
+<h2>Tòa Thánh Cao Đài</h2>
+<img src="https://image.vietgoing.com/editor/image_otx1623291439.jpg" alt="Tòa Thánh Cao Đài Tây Ninh">
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    margin:0;
+}
+
+/* khung bài viết */
+.article-content{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* đoạn văn */
+.article-content p{
+    text-align:justify;
+    line-height:1.8;
+    font-size:17px;
+    color:#333;
+    margin-bottom:22px;
+}
+
+/* bỏ khoảng trắng cuối */
+.article-content p:last-child{
+    margin-bottom:0;
+}
+</style>
+
+</head>
+<body>
+
+<div class="article-content">
+
+<p>
+Nếu Núi Bà Đen được ví như "phần xác" hùng vĩ của Tây Ninh, thì Tòa Thánh Cao Đài chính là "phần hồn" thanh tịnh, nơi hội tụ những tinh hoa kiến trúc và triết học độc bản mà không một nơi nào khác trên thế giới có được.
+</p>
+
+<p>
+Điểm khiến khách tham quan luôn cảm thấy kinh ngạc chính là sự hòa quyện tuyệt vời giữa các phong cách kiến trúc Đông - Tây trong một tổng thể hài hòa và đầy mê hoặc. Ngay từ cái nhìn đầu tiên, du khách sẽ bắt gặp sự giao thoa độc đáo khi những tháp cao mang hơi hướng Thiên Chúa giáo đứng cạnh mái đình uốn lượn của Phật giáo, đan xen cùng những nét tinh xảo đặc trưng của kiến trúc Hồi giáo, tất cả cùng hội tụ trên một công trình duy nhất.
+
+Tiến vào bên trong, không gian càng trở nên lộng lẫy với hệ thống hai hàng cột rồng rực rỡ sắc màu được chạm khắc cực kỳ tinh xảo, biểu trưng cho sức mạnh và sự uy nghiêm tột bậc. Tâm điểm của chính điện chính là biểu tượng Thiên Nhãn – hình ảnh Con Mắt Trái nhìn ra thế giới từ quả Càn Khôn. Đây không chỉ là biểu tượng thiêng liêng nhất của đạo Cao Đài, đại diện cho sự thấu thị và lòng từ bi của Thượng đế, mà còn là nét vẽ hoàn mỹ kết thúc bản giao hưởng kiến trúc đầy ấn tượng này.
+</p>
+<p>     
+    Mọi chi tiết tại Tòa Thánh đều được tính toán kỹ lưỡng để không chỉ dừng lại ở giá trị thẩm mỹ mà còn truyền tải những ý nghĩa biểu tượng sâu sắc về triết học và niềm tin. Điều này thể hiện rõ nét qua ba tông màu chủ đạo bao trùm không gian: sắc Vàng của Phật giáo, màu Xanh của Đạo giáo và sắc Đỏ của Nho giáo, tất cả hòa quyện để tượng trưng cho sự hợp nhất của các tôn giáo lớn trên thế giới cùng thông điệp vĩnh cửu về hòa bình và lòng bác ái.
+</p>
+<p>
+    Đặc biệt, giá trị của công trình còn nằm ở sự sáng tạo phi thường của những người thợ thủ công xưa; toàn bộ kiến trúc đồ sộ này được xây dựng bằng vật liệu bê tông cốt tre, một minh chứng cho trí tuệ và đôi bàn tay tài hoa của các tín đồ trong bối cảnh thiếu thốn máy móc hiện đại. Chính sự tận tâm và cách tận dụng nguyên liệu tự nhiên ấy đã biến Tòa Thánh thành một biểu tượng sống động cho tinh thần đoàn kết và sức mạnh của đức tin.
+</p>
+<img src="https://caodai.com.vn/gallery/album/Cung%20Dan%20(13)_640x427.jpg" alt="Lễ hội tại Tòa Thánh Cao Đài">
+<p> 
+    Để cảm nhận trọn vẹn sự độc đáo của văn hóa Cao Đài, du khách nên chọn thời điểm có mặt vào các khung giờ hành lễ, mà đặc sắc nhất chính là thời khắc chính ngọ lúc 12 giờ trưa. Trong không gian linh thiêng ấy, hệ thống lễ nhạc với tiếng đàn cò thanh mảnh và tiếng trống trầm hùng hòa quyện nhịp nhàng cùng lời kinh tụng, tạo nên một bầu không khí trang nghiêm và thoát tục lạ thường. Điểm xuyết cho sự uy nghi đó là hình ảnh hàng trăm tín đồ trong những bộ áo dài trắng muốt, lặng lẽ và thành kính tiến vào chính điện, tạo nên một cảnh tượng thị giác vô cùng ấn tượng, vừa thanh khiết vừa mang đậm nét đẹp của lòng đạo hạnh.
+</p>
+</div>
+
+<h2>Ẩm thực</h2>
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    margin:0;
+}
+
+/* khung bài viết */
+.article-content{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* đoạn văn */
+.article-content p{
+    text-align:justify;
+    line-height:1.8;
+    font-size:17px;
+    color:#333;
+    margin-bottom:22px;
+}
+
+/* bỏ khoảng trắng cuối */
+.article-content p:last-child{
+    margin-bottom:0;
+}
+</style>
+
+</head>
+<body>
+
+<div class="article-content">
+<p>Nhắc đến Tây Ninh mà bỏ qua mảng miếng ẩm thực thì quả là một thiếu sót lớn, bởi mỗi món ăn nơi đây đều là sự kết tinh của nắng, gió và bàn tay tài hoa của con người xứ Trảng.</p>
+<p>Đứng đầu bảng danh sách chắc chắn là bánh tráng phơi sương, một thức quà cầu kỳ mà thực khách phải thưởng thức mới thấu hết cái tâm của người làm nghề. Từng xấp bánh trắng ngần, dẻo thơm mùi gạo mới, được đem phơi dưới làn sương đêm để đạt độ mềm dai hoàn hảo mà không cần nhúng nước. Khi cuốn cùng thịt luộc, đĩa rau rừng đủ vị chát, chua, thơm và chấm vào chén nước mắm nêm đậm đà, vị giác như được đánh thức bởi sự hòa quyện tinh tế của đất trời.</p>
+<img src="https://reviewvilla.vn/wp-content/uploads/2023/08/banh-trang-phoi-suong-tay-ninh-20.jpg" alt="Bánh tráng phơi sương">
+<p>Bên cạnh đó, muối tôm Tây Ninh từ lâu đã trở thành "huyền thoại" trong lòng du khách thập phương. Dù vùng đất này không hề giáp biển, nhưng người dân đã sáng tạo nên loại gia vị độc nhất vô nhị với màu đỏ cam bắt mắt, vị cay nồng của ớt kết hợp cùng vị đậm đà của tôm khô và tỏi thơm. Đây không chỉ là món gia vị chấm trái cây "thần thánh" mà còn là món quà gói trọn tấm chân tình của người dân vùng biên viễn.</p>
+<img src="https://statics.vinpearl.com/muoi-tom-tay-ninh-7_1631532984.png" alt="Muối tôm Tây Ninh">
+<p>Cuối cùng, sẽ thật thiếu sót nếu chưa một lần nếm thử bò tơ Tây Ninh. Những thớ thịt bò mềm, ngọt lịm và thơm mùi sữa được chăn thả tự nhiên trên những cánh đồng cỏ xanh mướt. Dù là nướng tại bàn tỏa hương thơm nức mũi hay luộc cuốn rau rừng, bò tơ luôn mang đến một trải nghiệm ẩm thực đầy lôi cuốn, khẳng định vị thế của một đặc sản trứ danh không thể lẫn lộn với bất kỳ nơi nào khác.</p>
+<img src="https://ticotravel.com.vn/wp-content/uploads/2023/09/bo_to_tay_ninh_18.jpg" alt="Bò tơ Tây Ninh">
+
+<p>Xem thêm tại <a href="https://vi.wikipedia.org/wiki/T%C3%A2y_Ninh" target="_blank">Wikipedia</a></p>
+</main>
+
+<aside class="card sidebar">
+<h3>Bài viết dành cho bạn</h3>
+<!-- Đường kẻ dưới tiêu đề -->
+<div style="position:relative; height:1px; background:#e5e5e5; width:100%; margin-bottom:15px;">
+    <div style="position:absolute; left:0; top:0; height:3px; width:60px; background:#ff6a00;"></div>
+</div>
+   <a href="https://dulich.tayninh.gov.vn" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://dulich.tayninh.gov.vn/uploads/images/2025-04/dia-diem-du-lich-long-an-1.jpg"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 16/12/2024 &nbsp;&nbsp; 👁 1,923,831
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+               Khám phá du lịch tỉnh Tây Ninh
+            </div>
+        </div>
+
+    </div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+
+<a href="https://vinpearl.com/vi/tay-ninh-co-gi-choi-25-dia-diem-du-lich-duoc-check-in-nhieu-nhat-tai-tay-ninh" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://statics.vinpearl.com/tay-ninh-co-gi-choi-1.jpg"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 15/01/2024 &nbsp;&nbsp; 👁 1,923,831
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+               Tây Ninh có gì chơi? 25 địa điểm du lịch được CHECK - IN nhiều nhất tại Tây Ninh
+            </div>
+        </div>
+    </div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+
+<a href="https://www.tayninh.city/kham-pha/du-lich/kham-pha-tay-ninh" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://www.tayninh.city/uploads/files/2023/01/07/kham-pha-tay-ninh-1.jpg"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 07/01/2023 &nbsp;&nbsp; 👁 1,923,831
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+               Khám phá Tây Ninh với 5 địa điểm du lịch nổi tiếng
+            </div>
+        </div>
+    </div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+
+<a href="https://www.daivietourist.com/tour-du-lich-tay-ninh-2-ngay-1-dem-kham-pha-nui-ba-den-toa-thanh-ma-thien-lanh.html" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://cdn.xanhsm.com/2025/02/0d4e7f18-chua-nui-ba-den-1.jpg"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 24/07/2025 &nbsp;&nbsp; 👁 2,923,831
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+              Tour Du Lịch Tây Ninh 2 Ngày 1 Đêm - Khám Phá Núi Bà Đen, Tòa Thánh, Ma Thiên Lãnh
+            </div>
+        </div>
+    </div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+
+<a href="https://travelguide.org.vn/d1295/tay-ninh--vung-dat-cua-danh-lam-thang-canh-va-di-tich.html" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://travelguide.org.vn/img/images/h%E1%BB%93%20D%E1%BA%A7u%20Ti%E1%BA%BFng.jpg"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 25/06/2025 &nbsp;&nbsp; 👁 1,923,001
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+               Tây Ninh - Vùng đất của danh lam, thắng cảnh và Di tích
+            </div>
+        </div>
+    </div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+<div style="width:350px; margin:auto;">
+    <iframe width="100%" height="450px"
+src ="https://www.bing.com/ck/a?!&&p=2df59326c0bc9d365e1feb50a913713a2a27447af8b2dd082c87fde926a0c0ecJmltdHM9MTc3MTAyNzIwMA&ptn=3&ver=2&hsh=4&fclid=1b52676f-08bf-6689-328b-716209d9670f&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9VCVjMyVhMnkrTmluaCstK1YlYzMlYjluZyslYzQlOTElZTElYmElYTV0K2MlZTElYmIlYTdhK2RhbmgrbGFtJTJjK3RoJWUxJWJhJWFmbmcrYyVlMSViYSVhM25oK3YlYzMlYTArRGkrdCVjMyVhZGNoKyVjNCU5MSVjNCU4M25nK25nJWMzJWEweStuJWMzJWEwbytiYW8rbmhpJWMzJWFhdStsJWM2JWIwJWUxJWJiJWEzdCt4ZW0mJm1pZD0zQjNBQjg3ODM4MTI4NjEwN0JCQjNCM0FCODc4MzgxMjg2MTA3QkJCJmNodXJsPWh0dHBzJTNhJTJmJTJmd3d3LnlvdXR1YmUuY29tJTJmY2hhbm5lbCUyZlVDalNGQnBCRFpCOC1YV2N3WElIMjBGUSZGT1JNPVZBTUdaQw" 
+    title="Tây Ninh - vùng đất của văn hoá và tôn giáo với nhiều điểm nhấn tín ngưỡng đặc sắc" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>"
+</div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+<a href="https://vnexpress.net/cam-nang-du-lich-nui-ba-den-4994626.html" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://i1-dulich.vnecdn.net/2025/12/26/506438161-10239264520250865-72-3367-4346-1766682459.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=j1aeH26MFdrlB0IGErOMLg"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+    22/12/2025 &nbsp;&nbsp; 👁 1,006,001
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+               Cẩm nang Du lịch Núi Bà Đen 2026 từ A-Z...
+            </div>
+        </div>
+    </div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+
+<a href="https://mia.vn/cam-nang-du-lich/toa-thanh-tay-ninh-va-khong-gian-tin-nguong-doc-dao-cua-dao-cao-dai-9096" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://mia.vn/media/uploads/blog-du-lich/toa-thanh-tay-ninh-15-1733803337.jpg"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 07/02/2025 &nbsp;&nbsp; 👁 56,471
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+               Tòa Thánh Tây Ninh và không gian tín ngưỡng độc đáo của đạo Cao Đài
+            </div>
+        </div>
+    </div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+
+<a href="https://mia.vn/cam-nang-du-lich/toa-thanh-tay-ninh-va-khong-gian-tin-nguong-doc-dao-cua-dao-cao-dai-9096" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://mia.vn/media/uploads/blog-du-lich/muoi-tom-tay-ninh-vuong-van-huong-vi-dam-da-mien-nam-bo-01-1661173297.jpeg"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 05/06/2025 &nbsp;&nbsp; 👁 19,239
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+              Muối tôm Tây Ninh, vương vấn hương vị đậm đà miền Nam Bộ
+            </div>
+        </div>
+    </div>
+    </a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+
+<a href="https://vietnamtourism.gov.vn/post/19182" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://images.vietnamtourism.gov.vn/vn//images/2015/banh-trang-phoi-suong-3.jpg"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 26/10/2015 &nbsp;&nbsp; 👁 15,445
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+              Bánh tráng phơi sương- đặc sản nức tiếng Tây Ninh
+            </div>
+        </div>
+    </div>
+    </a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+<!-- SIDEBAR VIDEO -->
+<aside class="video-sidebar">
+
+    <div class="divider"></div>
+
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/WYej1pcDEFw"
+            title="YouTube video player"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="divider"></div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/e-4w9hnz4uc"
+            title="YouTube video player"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="divider"></div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/MTYDKdIgaR8"
+            title="YouTube video player"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="divider"></div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+<a href="https://buulong.com.vn/khu-vui-choi-o-tay-ninh.html#:~:text=B%C3%A0i%20vi%E1%BA%BFt%20n%C3%A0y%20s%E1%BA%BD%20t%E1%BB%95ng%20h%E1%BB%A3p%20chi%20ti%E1%BA%BFt,%C4%91%E1%BA%B7c%20bi%E1%BB%87t%20v%C3%A0%20khu%20vui%20ch%C6%A1i%20gi%C3%A1%20r%E1%BA%BB." 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://buulong.com.vn/wp-content/uploads/2026/01/khu-vui-choi-o-tay-ninh-ab1eb5.webp"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 04/01/2026 &nbsp;&nbsp; 👁 28,471
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+               Top 12 Khu Vui Chơi Tây Ninh Dành Cho Trẻ Em, Gia Đình Cuối Tuần
+            </div>
+        </div>
+    </div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+<a href="https://www.vietnam-travelonline.com/2023/12/28/tay-ninh-vietnam-travel-guide-into-the-holy-land-of-the-southeast-region/" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://sun-ecommerce-cdn.azureedge.net/ecommerce/service-sites/thumbnail/SunGroup/Destination/T%C3%A2y%20Ninh/20610/image-thumb__20610__1600/%28Ngo%CC%82%20Thi%CC%A3%20Thu%20Ba%29%20DJI_20241215185906_0063_D.jpg"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 28/11/2023 &nbsp;&nbsp; 👁 28,471
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+               Tay Ninh, Vietnam travel guide: Into the holy land of the Southeast region
+            </div>
+        </div>
+    </div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+<a href="https://vietnamnet.vn/tay-ninh-tren-nhung-tang-troi-dep-ngat-ngay-2061491.html" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://static-images.vnncdn.net/files/publish/2022/9/22/emag-cover-desk-644.jpg?width=0&s=YcrprUUw6hbDY2MEzi2Gnw"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 28/11/2025 &nbsp;&nbsp; 👁 300,471
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+              Tây Ninh trên những tầng trời đẹp ngất ngây
+            </div>
+        </div>
+    </div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+<a href="https://tinviettravel.com/du-lich-thanh-pho-ho-chi-minh/tour-du-lich-tay-ninh-2-ngay-1-dem-kham-pha-mien-dong-nam-bo.html" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://tinviettravel.com/uploads/tours/2022_11/du-lich-tay-ninh-nui-ba-den.jpg"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 12/12/2025 &nbsp;&nbsp; 👁 360,471
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+              Tour du lịch Tây Ninh 2 ngày 1 đêm khám phá miền Đông Nam Bộ
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="anhhung.css">
+<div class="hero-box">
+  <div class="hero-content">
+    <h3>Khám Phá Núi Bà Đen</h3>
+    <p>Biểu tượng tâm linh Tây Ninh</p>
+    <a href="#">Xem chi tiết →</a>
+  </div>
+</div>
+<link rel="stylesheet" href="thoitiet.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<aside class="sidebar-weather">
+    <div class="weather-box">
+        <div class="location-tag">
+            <i class="fa-solid fa-location-dot"></i> Đỉnh Núi Bà Đen
+        </div>
+        
+        <div class="main-info">
+            <i class="fa-solid fa-cloud-sun-rain weather-icon"></i>
+            <span class="temp-number">22°C</span>
+        </div>
+
+        <p class="weather-desc">Trời mát, có mây nhẹ. Thích hợp hành hương.</p>
+
+        <div class="extra-info">
+            <div class="info-item">
+                <small>Độ ẩm</small>
+                <strong>40%</strong>
+            </div>
+            <div class="info-item">
+                <small>Tầm nhìn</small>
+                <strong>>10km</strong>
+            </div>
+        </div>
+    </div>
+    </a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+<a href="https://www.facebook.com/Tinhtayninh.com.vn/" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/610599240_1440515374204600_8132034357730316334_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=KHh3CJ4k1SgQ7kNvwEA436s&_nc_oc=Adm_ycM3PbvxYa2gqJnk9GbazV1lqktazoy0lXVGtXdyUjwHMSmQVOCl6bVsDTBdLn8&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=a8tZjFkq6C4CQN9V3FEPhA&oh=00_AftDBKehGb6HCYrR1BaEfgfy4m6nce66wqSxWzUMvNst1w&oe=69976981"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 15/02/2026 &nbsp;&nbsp; 👁 164K 
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+               Tây Ninh - Tỉnh Tây Ninh
+            </div>
+        </div>
+    </div>
+    </a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+<a href="https://luhanhvietnam.com.vn/du-lich/diem-danh-cac-di-tich-lich-su-o-tay-ninh-noi-tieng.html" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/05_2023/di-tich-lich-su-o-tay-ninh-cum.jpg"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 11/05/2022 &nbsp;&nbsp; 
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+               Điểm danh các di tích lịch sử ở Tây Ninh nổi tiếng thu hút du khách gần xa
+            </div>
+        </div>
+    </div>
+    </a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+    <a href="https://dsvh.gov.vn/di-tich-lich-su-can-cu-trung-uong-cuc-mien-nam-2947" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="data:image/jpeg;base64,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"alt="Du lịch Tây Ninh"
+             style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 18/05/2022 &nbsp;&nbsp; 
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+               Di tích lịch sử Căn cứ Trung ương Cục miền Nam
+            </div>
+        </div>
+    </div>
+    </a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+    <a href="https://mia.vn/cam-nang-du-lich/di-tich-chien-thang-tua-hai-noi-ghi-lai-lich-su-cua-phong-trao-dong-khoi-8972" 
+   style="text-decoration: none; color: #222;">
+
+    <div style="display:flex; gap:15px; align-items:center;">
+        
+        <img src="https://mia.vn/media/uploads/blog-du-lich/di-tich-chien-thang-tua-hai-noi-ghi-lai-lich-su-cua-phong-trao-dong-khoi-1-1662127563.jpg"
+        alt="Du lịch Tây Ninh"
+        style="width:130px; height:80px; object-fit:cover; border-radius:6px;">
+
+        <div>
+            <div style="color:#777; font-size:14px; margin-bottom:6px;">
+             <i class="fa-thin fa-calendar"></i>
+
+ 07/02/2025 &nbsp;&nbsp; 
+            </div>
+
+            <div style="font-size:18px; font-weight:600;">
+              Di tích chiến thắng Tua Hai, nơi ghi lại lịch sử của phong trào Đồng Khởi
+            </div>
+        </div>
+    </div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+<!-- SIDEBAR VIDEO -->
+<aside class="video-sidebar">
+
+    <div class="divider"></div>
+
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/tZRWeacgnu8?si=BqrVtXiE5St3lZl3"
+            title="YouTube video player"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="divider"></div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/7QfQYgIwDS8?si=rcm3t009rpyO2sbD" 
+            title="YouTube video player"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="divider"></div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/UKRMTYUCh3s?si=i9ibwgddSOLVFndU" 
+            title="YouTube video player"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="divider"></div>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/30giWZXqJL0?si=ySxkbxAx7eKJ3mnn" 
+            title="YouTube video player"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="divider"></div>
+ </a>
+    <div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+    <div class="sidebar-inner">
+    
+    <div class="widget price-box">
+        <h3><i class="fa-solid fa-ticket"></i> Giá vé Cáp Treo</h3>
+        <div class="price-item">
+            <span>Vé Khứ Hồi (Vân Sơn)</span>
+            <strong>350.000đ</strong>
+        </div>
+        <div class="price-item">
+            <span>Vé Khứ Hồi (Chùa Hang)</span>
+            <strong>250.000đ</strong>
+        </div>
+        <div class="price-item">
+            <span>Combo Cáp treo + Buffet</span>
+            <strong>550.000đ</strong>
+        </div>
+        <button class="btn-primary">ĐẶT VÉ NGAY</button>
+    </div>
+
+    <div class="widget gallery-box">
+        <h3><i class="fa-solid fa-camera"></i> Góc Check-in đẹp</h3>
+        <div class="photo-grid">
+            <img src="https://picsum.photos/id/10/100/100" alt="View 1">
+            <img src="https://picsum.photos/id/20/100/100" alt="View 2">
+            <img src="https://picsum.photos/id/30/100/100" alt="View 3">
+            <img src="https://picsum.photos/id/40/100/100" alt="View 4">
+        </div>
+    </div>
+
+    </div>
+
+<style>
+    /* Style cho Bảng giá */
+    .price-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px dashed #ddd;
+        font-size: 0.9rem;
+    }
+    .price-item strong { color: #e74c3c; }
+
+    .btn-primary {
+        width: 100%;
+        background: #e67e22;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        margin-top: 15px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .btn-primary:hover { background: #d35400; }
+
+    /* Style cho Lưới ảnh */
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .photo-grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: transform 0.3s;
+        cursor: pointer;
+    }
+    .photo-grid img:hover { transform: scale(1.05); }
+</style>
+<style>
+    /* 1. Reset & Nền tảng */
+    :root {
+        --primary: #e67e22;
+        --dark: #2c3e50;
+        --bg: #f4f7f6;
+        --shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    body {
+        background-color: var(--bg);
+        color: #444;
+        line-height: 1.6;
+    }
+
+    /* 2. Layout Sidebar Container */
+    .sidebar-inner {
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px; /* Khoảng cách giữa các widget */
+    }
+
+    /* 3. Style chung cho các Widget (Card) */
+    .widget {
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(0,0,0,0.02);
+    }
+
+    .widget h3 {
+        font-size: 1.2rem;
+        color: var(--dark);
+        margin-top: 0;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border-bottom: 2px solid #f1c40f;
+        padding-bottom: 10px;
+    }
+
+    /* 4. CHỈNH SỬA ĐẾM NGƯỢC (Đẹp hơn hình bạn gửi) */
+    .timer-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .time-unit {
+        flex: 1;
+        background: #fff5e6;
+        padding: 15px 5px;
+        border-radius: 12px;
+        text-align: center;
+        border-bottom: 4px solid var(--primary);
+    }
+
+    .time-unit b {
+        display: block;
+        font-size: 1.6rem;
+        color: var(--primary);
+        font-weight: 800;
+    }
+
+    .time-unit span {
+        font-size: 0.75rem;
+        color: #7f8c8d;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* 5. CHỈNH SỬA LỘ TRÌNH (Dạng Timeline chuyên nghiệp) */
+    .timeline {
+        padding-left: 15px;
+        border-left: 2px dashed #ddd;
+        margin-left: 10px;
+    }
+
+    .step {
+        position: relative;
+        padding-bottom: 20px;
+        padding-left: 25px;
+    }
+
+    .step::before {
+        content: attr(data-number);
+        position: absolute;
+        left: -26px;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        background: var(--primary);
+        color: white;
+        border-radius: 50%;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+
+    .step p { margin: 0; font-weight: 600; font-size: 0.95rem; }
+
+    /* 6. CHỈNH SỬA ĐÁNH GIÁ (Dạng Quote) */
+    .review-card {
+        background: #fdf2e9;
+        padding: 20px;
+        border-radius: 15px;
+        position: relative;
+    }
+
+    .review-card i {
+        color: #f1c40f;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .review-text {
+        font-style: italic;
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+    .reviewer {
+        margin-top: 15px;
+        display: block;
+        font-weight: bold;
+        color: var(--dark);
+    }
+</style>
+</a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+<div class="sidebar-inner">
+    <div class="widget">
+        <h3><i class="fa-solid fa-map-location-dot"></i> Vị trí bản đồ</h3>
+        <div style="border-radius: 15px; overflow: hidden;">
+            <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.11342676059!2d106.12658427585098!3d11.362947447831034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310b10620228d795%3A0x62831d102a0a256!2zTsO6aSBCw6AgxJllbg!5e0!3m2!1svi!2svn!4v1700000000000!5m2!1svi!2svn" 
+    width="100%" height="200" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy">
+</iframe>
+        </div>
+        <p style="font-size: 0.85rem; color: #666; margin-top: 15px;">📍 Cách TP. Tây Ninh 11km về phía Đông Bắc.</p>
+    </div>
+
+    <div class="widget">
+        <h3><i class="fa-solid fa-hourglass-half"></i> Hội Xuân Núi Bà</h3>
+        <div class="timer-container">
+            <div class="time-unit"><b id="d">00</b><span>Ngày</span></div>
+            <div class="time-unit"><b id="h">00</b><span>Giờ</span></div>
+            <div class="time-unit"><b id="m">00</b><span>Phút</span></div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h3><i class="fa-solid fa-route"></i> Lộ trình gợi ý</h3>
+        <div class="timeline">
+            <div class="step" data-number="1"><p>Chùa Bà (Cúng bái, cầu an)</p></div>
+            <div class="step" data-number="2"><p>Đỉnh núi (Săn mây, tượng Phật)</p></div>
+            <div class="step" data-number="3"><p>Ăn trưa (Buffet Vân Sơn)</p></div>
+        </div>
+    </div>
+<link rel="stylesheet" href="danhgia.css">
+    <div class="widget review-container">
+    <h3><i class="fa-solid fa-comments"></i> Khách hàng nói gì</h3>
+    
+    <div class="review-item">
+        <div class="reviewer-info">
+            <img src="https://ui-avatars.com/api/?name=Nguyen+An&background=random" alt="Avatar" class="avatar">
+            <div>
+                <span class="reviewer-name">Nguyễn An</span>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+        </div>
+        <p class="review-text">"Cảnh sắc tuyệt vời, cáp treo đi rất êm. Đỉnh núi mát mẻ như Đà Lạt vậy!"</p>
+    </div>
+
+    <div class="review-item">
+        <div class="reviewer-info">
+            <img src="https://ui-avatars.com/api/?name=Thanh+Ngoc&background=random" alt="Avatar" class="avatar">
+            <div>
+                <span class="reviewer-name">Thanh Ngọc</span>
+                <div class="stars">⭐⭐⭐⭐</div>
+            </div>
+        </div>
+        <p class="review-text">"Đã đi nhiều nơi nhưng cảm giác ở Núi Bà thật đặc biệt, như lạc vào chốn bồng lai tiên cảnh."</p>
+    </div>
+    <div class="review-item">
+        <div class="reviewer-info">
+            <img src="https://ui-avatars.com/api/?name=Thanh+Ngoc&background=random" alt="Avatar" class="avatar">
+            <div>
+                <span class="reviewer-name">Tuyết Trân</span>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+        </div>
+        <p class="review-text">"Một trải nghiệm tuyệt vời, không gian yên bình và cảnh quan thiên nhiên rất đẹp!"</p>
+    </div>
+    <div class="review-item">
+        <div class="reviewer-info">
+            <img src="https://ui-avatars.com/api/?name=Thanh+Ngoc&background=random" alt="Avatar" class="avatar">
+            <div>
+                <span class="reviewer-name">Hồng Ngọc</span>
+                <div class="stars">⭐⭐⭐⭐</div>
+            </div>
+        </div>
+        <p class="review-text">"Hơi nắng nhưng vẫn rất tuyệt vời!"</p>
+    </div>
+    </a>
+<div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+<div class="widget share-box">
+    <h3><i class="fa-solid fa-share-nodes"></i> Chia sẻ Bài viết</h3>
+    <div class="share-grid">
+        <a href="#" class="share-btn fb"><i class="fa-brands fa-facebook"></i> Facebook</a>
+        <a href="#" class="share-btn tw"><i class="fa-brands fa-twitter"></i> Twitter</a>
+        <a href="#" class="share-btn wa"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
+        <a href="#" class="share-btn tg"><i class="fa-brands fa-telegram"></i> Telegram</a>
+    </div>
+</div>
+<link rel="stylesheet" href="chiase.css">
+<div class="widget download-box">
+    <h3><i class="fa-solid fa-mobile-screen"></i> TẢI ỨNG DỤNG</h3>
+    <p class="app-desc">Khám phá Núi Bà hiện đại ngay trên điện thoại của bạn!</p>
+    <div class="app-links">
+        <a href="#" class="app-btn">
+            <i class="fa-brands fa-apple"></i>
+            <span>Tải trên <b>App Store</b></span>
+        </a>
+        <a href="#" class="app-btn">
+            <i class="fa-brands fa-google-play"></i>
+            <span>Tải trên <b>Google Play</b></span>
+        </a>
+        <link rel="stylesheet" href="timkiem.css">
+    <div class="widget search-box">
+    <div class="search-container">
+        <input type="text" placeholder="Tìm kiếm thông tin...">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+</div>
+
+</aside>
+
+    
+    
+
+
+
+</aside>
+
+
+</aside>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+<style>
+.footer{
+    background:#0f1a24;
+    color:#cfd6dd;
+    padding:28px 40px;
+    margin-top:60px;
+}
+
+/* khung chứa */
+.footer-box{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+/* logo */
+.footer-logo{
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+/* chữ màu chạy */
+.footer-logo span{
+    background: linear-gradient(90deg,#ff6a00,#ffcc00,#00c3ff,#ff6a00);
+    background-size:300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation: run 6s linear infinite;
+}
+
+@keyframes run{
+    from{background-position:0%}
+    to{background-position:300%}
+}
+
+/* thông tin phải */
+.footer-info{
+    text-align:right;
+    font-size:14px;
+    line-height:1.9;
+    color:#aab4bf;
+}
+
+/* nút lên đầu */
+.scroll-top{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:44px;
+    height:44px;
+    background:#e5e7ea;
+    color:#333;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:.25s;
+}
+
+.scroll-top:hover{
+    background:#ff6a00;
+    color:white;
+}
+
+/* cuộn mượt */
+html{scroll-behavior:smooth;}
+</style>
+
+
+<div class="footer-box">
+
+    <!-- BÊN TRÁI -->
+    <div class="footer-logo">
+        <span>TravelBlog</span>
+    </div>
+
+    <!-- BÊN PHẢI -->
+    <div class="footer-info">
+        ✉ Email: huongchau948@gmail.com <br>
+        ☎ Điện thoại: 0865227759 (TP HCM) <br>
+        🛡 Điều khoản sử dụng
+    </div>
+
+</div>
+
+<!-- Nút lên đầu -->
+<a href="#" class="scroll-top">↑</a>
+
+</footer>
+
+</style>
+</footer>
+
+</body>
+</html>

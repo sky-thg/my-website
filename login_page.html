@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="dangnhap.css">
+<div class="login-container">
+    <h2>Đăng nhập hệ thống</h2>
+    <input type="text" id="userField" placeholder="Tên đăng nhập">
+    <input type="password" placeholder="Mật khẩu">
+    <button class="submit-btn" id="confirmBtn">Xác nhận</button>
+</div>
+
+<script>
+    document.getElementById('confirmBtn').onclick = function() {
+        const username = document.getElementById('userField').value || "Thành viên";
+
+        // Gửi dữ liệu về tab "mẹ" (Trang chủ)
+        window.opener.postMessage({
+            type: 'LOGIN_SUCCESS',
+            user: username
+        }, "*");
+
+        // Đóng tab đăng nhập này lại
+        window.close();
+    };
+</script>

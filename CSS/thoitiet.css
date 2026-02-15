@@ -1,0 +1,60 @@
+/* Trang trí Widget thời tiết */
+.sidebar-weather {
+    width: 280px; /* Độ rộng phù hợp để lấp khoảng trống bên phải */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.weather-box {
+    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.location-tag {
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.main-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.weather-icon {
+    font-size: 3rem;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
+}
+
+.temp-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.weather-desc {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.extra-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 15px;
+}
+
+.info-item small {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.8;
+}

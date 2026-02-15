@@ -1,0 +1,74 @@
+/* Style Thanh tìm kiếm */
+.search-container {
+    display: flex;
+    background: #f1f1f1;
+    border-radius: 25px;
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+}
+.search-container input {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 8px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+.search-container button {
+    border: none;
+    background: none;
+    color: #e67e22;
+    cursor: pointer;
+}
+
+/* Style Video */
+.video-placeholder {
+    border-radius: 10px;
+    overflow: hidden;
+    line-height: 0;
+}
+.video-desc {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Style Liên hệ hỗ trợ */
+.contact-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #fff8f8;
+    border-radius: 10px;
+}
+.contact-item i {
+    font-size: 1.5rem;
+    color: #e74c3c;
+}
+.contact-item b {
+    display: block;
+    font-size: 0.85rem;
+    color: #333;
+}
+.contact-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.btn-call {
+    width: 100%;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-call:hover { background: #c0392b; }
